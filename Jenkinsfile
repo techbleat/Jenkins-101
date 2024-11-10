@@ -7,9 +7,9 @@ pipeline {
     }
     
     stages {
-        stage ('show environment') {
+        stage ('Initialise terraform') {
             steps {
-                sh 'env'
+                sh 'terraform init'
             }
         }
         stage ('Second stage') {
