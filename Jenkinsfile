@@ -3,12 +3,13 @@ pipeline {
     environment {
         AWS_SECRET_ACCESS_KEY = credentials ('AWS_SECRET_ACCESS_KEY')
         AWS_ACCESS_KEY_ID =  credentials ('AWS_ACCESS_KEY_ID')
+        students = '123456'
     }
     
     stages {
-        stage ('First stage') {
+        stage ('show environment') {
             steps {
-                echo ' this is stage one '
+                sh 'env'
             }
         }
         stage ('Second stage') {
